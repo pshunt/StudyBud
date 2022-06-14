@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+li<!DOCTYPE html>
 <html>
     <head>
         <meta charset="uft-8">
@@ -8,6 +8,14 @@
     <body>
 
         {% include 'navbar.html' %}
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li> {{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
 
         {% block content %}
 
